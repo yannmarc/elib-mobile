@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SplashScreen from './src/screens/home/SplashScreen';
-import SeConnecter from './src/screens/auth/SeConnecter';
+import BottomSheet from './src/screens/auth/SeConnecter';
 
 // Creating a variable that holds our stackNavigation
 
@@ -18,7 +18,9 @@ export default function App() {
     // Embedding everything into the Navigator component
     <NavigationContainer>
       <AuthNavigation.Navigator>
-        <AuthNavigation.Screen name = 'Se connecter' component={SeConnecter}></AuthNavigation.Screen>
+        <AuthNavigation.Screen name = 'Se connecter' component={BottomSheet}></AuthNavigation.Screen>
+        {/* handling the spash screen */}
+
       </AuthNavigation.Navigator>
     </NavigationContainer>
     
